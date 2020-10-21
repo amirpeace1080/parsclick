@@ -7,6 +7,7 @@
 
 <script>
 import PostList from '@/components/PostList'
+import data from '@/api/data.json'
 
 export default {
   components:{
@@ -14,28 +15,10 @@ export default {
   },
   data() {
     return {
-      loadedPosts:[
-        {
-          id: 1,
-          title: 'first',
-          body: 'the first post body',
-          img: 'pic.jpeg'
-        },
-        {
-          id: 2,
-          title: 'second',
-          body: 'the second post body',
-          img: 'pic.jpeg'
-        },
-        {
-          id: 3,
-          title: 'third',
-          body: 'the third post body',
-          img: 'pic.jpeg'
-        },
-      ]
+      loadedPosts: data
     }
   },
+
 }
 </script>
 
