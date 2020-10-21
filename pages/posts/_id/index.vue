@@ -9,37 +9,33 @@
       <div class="media-content">
         <div class="content">
           <p>
-            <strong>John Smith</strong> <small>@johnsmith</small>
-            <small>31m</small>
+            <strong>{{ loadedPost.title }}</strong>
             <br />
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin
-            ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas
-            non massa sem. Etiam finibus odio quis feugiat facilisis.
+            {{ loadedPost.body }}
           </p>
         </div>
-        <nav class="level is-mobile">
-          <div class="level-left">
-            <a class="level-item">
-              <span class="icon is-small"><i class="fas fa-reply"></i></span>
-            </a>
-            <a class="level-item">
-              <span class="icon is-small"><i class="fas fa-retweet"></i></span>
-            </a>
-            <a class="level-item">
-              <span class="icon is-small"><i class="fas fa-heart"></i></span>
-            </a>
-          </div>
-        </nav>
-      </div>
-      <div class="media-right">
-        <button class="delete"></button>
       </div>
     </article>
   </div>
 </template>
 
 <script>
-export default {}
+import data from '@/api/data.json'
+
+export default {
+  asyncData(context, callback) {
+    setTimeout(() => {
+      callback(null, {
+        loadedPost: {
+          id: 1,
+          title: 'first',
+          body: `the first post body(ID: ${context.params.id})`,
+          img: 'pic.jpeg',
+        },
+      })
+    }, 2000)
+  },
+}
 </script>
 
 <style lang="scss" scoped></style>
