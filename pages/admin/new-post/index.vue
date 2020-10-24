@@ -1,16 +1,18 @@
 <template>
   <div class="admin-new-post-page ml-10">
-    <AdminPostForm />
+    <AdminPostForm :post="post" />
   </div>
 </template>
 
 <script>
-import AdminPostForm from '@/components/Admin/AdminPostForm'
+import data from '@/api/data.json'
 
 export default {
-  components:{
-    AdminPostForm
-  }
+  data() {
+    return {
+      post: data[0]
+    }
+  },
 }
 </script>
 
