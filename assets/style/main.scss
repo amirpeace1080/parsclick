@@ -32,3 +32,13 @@ strong{
 
 .pr-5{padding-right: 5px;}
 .pr-10{padding-right: 10px;}
+
+
+.fade-enter-active,
+.fade-leave-active{
+  transition: opacity 0.5s;
+}
+.fade-enter,
+.fade-leave-to{
+  opacity: 0;
+}

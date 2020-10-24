@@ -56,5 +56,11 @@ export default {
         }
       }
     },
-  }
+  },
+  loading:{
+    color: '#ff5000',
+    height: '4px',
+    duration: 5000,
+  },
+  transition: 'fade',
 }
